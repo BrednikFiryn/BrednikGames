@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 945313587907500342}
   - component: {fileID: 4229361801124157075}
   - component: {fileID: 2113667547475501657}
+  - component: {fileID: 2042658301784415892}
+  - component: {fileID: 4304507105201910115}
   m_Layer: 0
   m_Name: Health_Pickup
   m_TagString: Untagged
@@ -83,6 +85,31 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &2042658301784415892
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 456478881212515212}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.58397615, y: 0.22234996, z: 0.41920847}
+  m_Center: {x: 0, y: 0.11046127, z: 0.0039479807}
+--- !u!114 &4304507105201910115
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 456478881212515212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e66ef9e6ef340647929fb6970d8222d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3925797954357727082
 GameObject:
   m_ObjectHideFlags: 0
