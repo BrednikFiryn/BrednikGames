@@ -56,10 +56,22 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\PlayerBehavior.cs" />
-    <Compile Include="Assets\Scripts\MaidenScripts\MaidenMove.cs" />
+    <Compile Include="Assets\Scripts\MaidenScripts\CheckScripts\BarrierCollision.cs" />
+    <Compile Include="Assets\Scripts\MaidenScripts\CheckScripts\ConditionStorage.cs" />
+    <Compile Include="Assets\Scripts\MaidenScripts\AbilitiesScripts\AttackDistant.cs" />
+    <Compile Include="Assets\Scripts\MaidenScripts\MoveScripts\PlayerInput.cs" />
+    <Compile Include="Assets\Scripts\MaidenScripts\MoveScripts\PlayerMove.cs" />
+    <Compile Include="Assets\Scripts\CollectionScripts.cs" />
+    <Compile Include="Assets\Scripts\MaidenScripts\CheckScripts\ZonePosition.cs" />
+    <Compile Include="Assets\Scripts\MaidenScripts\CheckScripts\GroundCheck.cs" />
+    <Compile Include="Assets\Scripts\MaidenScripts\MoveScripts\PlayerJump.cs" />
+    <Compile Include="Assets\Scripts\MaidenScripts\AbilitiesScripts\AttackMelee.cs" />
+    <Compile Include="Assets\Scripts\EnemyScripts\EnemyTarget.cs" />
+    <Compile Include="Assets\Scripts\MaidenScripts\CheckScripts\DamageTake.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\Assets\Character\BaseCharacter\BaseCharacter\Sourcefiles\Shader\DoubleSided.shader" />
+    <None Include="Assets\Assets\Character\BaseCharacter\BaseCharacter\Sourcefiles\Shader\UnlitColor.shader" />
     <None Include="Assets\Assets\SkyBox_Day\Stylized Sky\Shaders\Stylized Sky.shader" />
   </ItemGroup>
   <ItemGroup>
