@@ -56,18 +56,24 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\MaidenScripts\CheckScripts\BarrierCollision.cs" />
-    <Compile Include="Assets\Scripts\MaidenScripts\CheckScripts\ConditionStorage.cs" />
+    <Compile Include="Assets\Scripts\EnemyScripts\EnemyAssignmentComponent.cs" />
+    <Compile Include="Assets\Scripts\MaidenScripts\CommonScripts\BarrierCollision.cs" />
+    <Compile Include="Assets\Scripts\EnemyScripts\EnemyTargetMouse.cs" />
+    <Compile Include="Assets\Scripts\MaidenScripts\CommonScripts\ConditionStorage.cs" />
     <Compile Include="Assets\Scripts\MaidenScripts\AbilitiesScripts\AttackDistant.cs" />
+    <Compile Include="Assets\Scripts\MaidenScripts\AuxiliaryScripts_Attack\DamageTake.cs" />
     <Compile Include="Assets\Scripts\MaidenScripts\MoveScripts\PlayerInput.cs" />
-    <Compile Include="Assets\Scripts\MaidenScripts\MoveScripts\PlayerMove.cs" />
-    <Compile Include="Assets\Scripts\CollectionScripts.cs" />
-    <Compile Include="Assets\Scripts\MaidenScripts\CheckScripts\ZonePosition.cs" />
-    <Compile Include="Assets\Scripts\MaidenScripts\CheckScripts\GroundCheck.cs" />
-    <Compile Include="Assets\Scripts\MaidenScripts\MoveScripts\PlayerJump.cs" />
+    <Compile Include="Assets\Scripts\EnemyScripts\EnemySpawnPoint.cs" />
     <Compile Include="Assets\Scripts\MaidenScripts\AbilitiesScripts\AttackMelee.cs" />
-    <Compile Include="Assets\Scripts\EnemyScripts\EnemyTarget.cs" />
-    <Compile Include="Assets\Scripts\MaidenScripts\CheckScripts\DamageTake.cs" />
+    <Compile Include="Assets\Scripts\MaidenScripts\MoveScripts\PlayerMove.cs" />
+    <Compile Include="Assets\Scripts\EnemyScripts\EnemyAI.cs" />
+    <Compile Include="Assets\Scripts\LvlScripts\CollectionScripts.cs" />
+    <Compile Include="Assets\Scripts\MaidenScripts\AuxiliaryScripts_Attack\AttackMeleeTarget.cs" />
+    <Compile Include="Assets\Scripts\MaidenScripts\AuxiliaryScripts_Attack\AttackDistantTarget.cs" />
+    <Compile Include="Assets\Scripts\MaidenScripts\CommonScripts\CheckCollisionBarrier.cs" />
+    <Compile Include="Assets\Scripts\MaidenScripts\CommonScripts\GroundCheck.cs" />
+    <Compile Include="Assets\Scripts\MaidenScripts\MoveScripts\PlayerJump.cs" />
+    <Compile Include="Assets\Scripts\LvlScripts\AltarTakeDamage.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Assets\Character\BaseCharacter\BaseCharacter\Sourcefiles\Shader\DoubleSided.shader" />

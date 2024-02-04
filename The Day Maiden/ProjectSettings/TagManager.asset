@@ -7,6 +7,9 @@ TagManager:
   - Barrier
   - Matter
   - Spirit
+  - Enemy
+  - SpawnPoint
+  - EnemyTarget
   layers:
   - Default
   - TransparentFX

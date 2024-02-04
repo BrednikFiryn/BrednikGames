@@ -2,13 +2,12 @@ using UnityEngine;
 
 public class PlayerJump : MonoBehaviour
 {
-     [SerializeField] private float jumpVelocity = 5f;
+   [SerializeField] private float jumpVelocity = 5f;
 
     private Rigidbody _rb;
-
     private GroundCheck groundCheck;
 
-    private void Start()
+    private void Awake()
     {
         _rb = GetComponent<Rigidbody>();
         groundCheck = FindAnyObjectByType<GroundCheck>();
@@ -19,6 +18,9 @@ public class PlayerJump : MonoBehaviour
         JumpLogic();
     }
 
+    /// <summary>
+    /// Прыжок
+    /// </summary>
     private void JumpLogic()
     {
         if (Input.GetKey(KeyCode.Space) && groundCheck.isGrounded)

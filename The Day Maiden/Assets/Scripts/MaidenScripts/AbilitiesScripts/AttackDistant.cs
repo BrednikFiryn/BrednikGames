@@ -3,17 +3,17 @@ using UnityEngine;
 public class AttackDistant : MonoBehaviour
 {
 
-    [SerializeField] private ParticleSystem attackRay;
-    [SerializeField] private float attackDelay;
-    [SerializeField] private GameObject damageZone;
-    [SerializeField] private GameObject ray;
+    [SerializeField] private float attackDistantDelay;
+    [SerializeField] private GameObject fireBall;
+    [SerializeField] private ParticleSystem particleSystem;
 
-    private ZonePosition zonePosition;
+    private AttackDistantTarget attackDistantTarget;
+
     private float attackTime = float.MinValue;
 
     private void Start()
     {
-        zonePosition = FindObjectOfType<ZonePosition>();
+        attackDistantTarget = FindObjectOfType<AttackDistantTarget>();
     }
 
     void Update()
@@ -21,18 +21,26 @@ public class AttackDistant : MonoBehaviour
         AttackCheck();
     }
 
+    /// <summary>
+    /// Атака по выбраному противнику.
+    /// </summary>
     private void AttackCheck()
     {
-        if (Time.time < attackTime + attackDelay) return;
+        if (Time.time < attackTime + attackDistantDelay) return;
 
-        damageZone.SetActive(false);
+        fireBall.transform.position = gameObject.GetComponent<AttackDistant>().transform.position;
 
-        if (Input.GetKeyDown(KeyCode.Mouse2))
+        if (Input.GetKeyDown(KeyCode.Mouse2) && attackDistantTarget.target != null)
         {
-            ray.transform.position = zonePosition.target.transform.position;
-            damageZone.SetActive(true);
+            fireBall.transform.position = attackDistantTarget.target.transform.position;
+            particleSystem.Play();
+
             attackTime = Time.time;
-            attackRay.Play();
+        }
+
+        else if (attackDistantTarget.target == false)
+        {
+            fireBall.transform.position = gameObject.transform.position;
         }
     }
 }

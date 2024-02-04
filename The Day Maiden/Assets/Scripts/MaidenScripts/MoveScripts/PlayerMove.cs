@@ -2,61 +2,33 @@ using UnityEngine;
 
 public class PlayerMove : MonoBehaviour
 {
-    
-   [SerializeField] private float moveSpeed = 10f;
-   [SerializeField] private float moveRun = 10f;
    [SerializeField] private float rotateSpeed = 75f;
-
-    [HideInInspector] public float moveSpeedStart;
-    [HideInInspector] public float moveSpeedSlow;
+   [SerializeField] public float move = 10f;
+   [SerializeField] public float moveSpeed = 10f;
 
     private Rigidbody _rb;
-
     private PlayerInput playerInput;
-    private BarrierCollision barrierCollision;
 
 
-    private void Start()
+    private void Awake()
     {
-        moveSpeedSlow = moveSpeed / 2;
-        moveSpeedStart = moveSpeed;
         _rb = GetComponent<Rigidbody>();
-        barrierCollision = FindObjectOfType<BarrierCollision>();
         playerInput = FindObjectOfType<PlayerInput>();
-}
+    }
 
     private void FixedUpdate()
     {
         MoveLogic();
     }
 
-    private void Update()
-    {
-        CheckSpeed();
-    }
-
+    /// <summary>
+    /// Движение и поворот.
+    /// </summary>
     private void MoveLogic()
     {
         Vector3 rotation = Vector3.up * playerInput.hInput;
         Quaternion angleRot = Quaternion.Euler(rotation * rotateSpeed * Time.fixedDeltaTime);
-        _rb.MovePosition(this.transform.position + this.transform.forward * playerInput.vInput * moveSpeed * Time.fixedDeltaTime);
+        _rb.MovePosition(this.transform.position + this.transform.forward * playerInput.vInput * move * Time.fixedDeltaTime);
         _rb.MoveRotation(_rb.rotation * angleRot);
-    }
-
-    private void CheckSpeed()
-    {
-        if (Input.GetKey(KeyCode.LeftShift) && !barrierCollision.stop)
-        {
-            moveSpeed = moveRun;
-        }
-
-        else if (barrierCollision.stop)
-        {
-            moveSpeed = moveSpeedSlow;
-        }
-
-        else
-            moveSpeed = moveSpeedStart;
-
     }
 }
